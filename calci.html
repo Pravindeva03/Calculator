@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <style>
+        h1{
+        
+            padding: 12px;
+            border: 5px solid green;
+            border-right: 80px;
+            border-left:80px ;
+            border-radius: 14px;
+            margin: 80px;
+            top: -30px;
+            position: relative;
+            width: 320px;
+            
+            
+        }
+        .box{
+            border: 6px solid black;
+            height: 500px;
+            width: 500px;
+            background-color:lightblue;
+            border-radius: 45px;
+            border-left-color: darkmagenta;
+            border-right-color:darkmagenta;
+            border-top-color:darkslategray;
+            border-bottom-color:darkslategray;
+        }
+        
+         input{
+            height: 40px;
+            width: 137px;
+            margin: 1px;
+            border: 2px solid black;
+            border-radius: 30px;
+            position: relative;
+            top: -50px;
+            left: 105px;
+            background-color:lightgrey;
+            border-bottom-left-radius: 150px;
+            border-bottom-right-radius:150px ;
+         }
+         button{
+            height: 30px;
+            width: 62px;
+            text-align: center;
+            margin: 5.0px;
+            border: 2px solid black;
+            border-radius: 20px;
+            position: relative;
+            top: -20px;
+            left: 105px;
+            background-color: lightgoldenrodyellow;
+            cursor:pointer;
+         }
+         #re{
+            top: 90px;
+            left: -117px;
+            position: relative;
+            background-color: lightgreen;
+            border-radius: 30px;
+         }
+    </style>
+    
+<body>
+    <div class="box" style="margin: auto;">
+        
+    <h1>Mini-Basic-Calculator</h1>
+    <input id="i1" type="number" placeholder="Num1" style="text-align: center">
+    <input  id="i2" type="number" placeholder="Num2" style="text-align: center"><br><br>
+
+    <button onclick="addition()">Add(+)</button>
+    <button onclick="Subraction()">Sub(-)</button>
+    <button onclick="Multiplication()">Multi(*)</button>
+    <button onclick="Division()">Div(/)</button>
+
+    <input id="re" type="number" placeholder="Result" style="text-align: center;">
+
+</div>
+
+    <script>
+        function addition(){
+            let Num1=Number(document.getElementById('i1').value)
+            let Num2=Number(document.getElementById('i2').value)
+            let res=Num1+Num2;
+            document.getElementById('re').value=res;
+        }
+        function Subraction(){
+            let Num1=Number(document.getElementById('i1').value);
+            let Num2=Number(document.getElementById('i2').value);
+            res=Num1-Num2;
+            document.getElementById('re').value=res;
+        }
+        function Multiplication(){
+            let Num1=Number(document.getElementById('i1').value);
+            let Num2=Number(document.getElementById('i2').value);
+            res=Num1*Num2;
+            document.getElementById('re').value=res;
+        }
+        function Division(){
+            let Num1=Number(document.getElementById('i1').value);
+            let Num2=Number(document.getElementById('i2').value);
+            res=Num1/Num2;
+            document.getElementById('re').value=res;
+        }
+    </script>
+</body>
+</html>
